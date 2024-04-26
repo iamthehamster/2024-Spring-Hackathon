@@ -2,6 +2,8 @@ import "package:flutter/material.dart";
 import "package:fluttercopy/Screen/SignUpPopUp.dart";
 import "package:fluttercopy/Theme/SunyTheme.dart";
 
+import "BottomBar/Home.dart";
+
 class LoginPage extends StatelessWidget {
   const LoginPage({ Key? key }) : super(key: key);
 
@@ -45,10 +47,14 @@ class LoginPage extends StatelessWidget {
             ElevatedButton(
               child: const Text(
                   textAlign: TextAlign.center,
-                  'Log In',
-
+                  'Log In (temp. log in anyway)',
               ),
-              onPressed: (){},
+              onPressed: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Home(),),
+                );
+              },
             ),
           ]
       ),

@@ -1,10 +1,13 @@
-// import 'package:flutter/material.dart';
-//
-// class SunyTheme {
-//
-//   final SUNYColor = [#FFFFFF, #02235C, #00539B, #009EE0, #00DDFF];
-//
-//   String SUNYTheme(int a){
-//     return SUNYColor[a];
-//   }
-// }
+import 'package:flutter/material.dart';
+
+class SunyTheme{
+  static Color SunyDarkBlue(){
+    return Color(0xff02235C);
+  }
+  static Color SunyBlue(){
+    return Color(0xff00539B);
+  }
+  static Color SunyLightBlue(){
+    return Color(0xff009EE0);
+  }
+}
