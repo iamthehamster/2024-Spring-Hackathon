@@ -17,7 +17,6 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       body:
       Column(
-          padding: const EdgeInsets.all(90.0),
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Container(
