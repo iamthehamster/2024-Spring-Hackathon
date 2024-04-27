@@ -17,10 +17,10 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       body:
       Column(
-          padding: const EdgeInsets.all(90.0),
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Container(
+              padding: const EdgeInsets.all(90.0),
               height: MediaQuery.of(context).size.height * 0.1
             ),
             Container(
