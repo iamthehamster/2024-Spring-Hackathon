@@ -23,34 +23,71 @@ class Home extends StatelessWidget {
       ),
       drawer: HamburgerMenu(),
       body:
-      Row(
+      Column(
           // mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            // TextField(
-            //     decoration: InputDecoration(
-            //       border: OutlineInputBorder(),
-            //       labelText: "ID",
-            //     )),
             Container(
-              width: 100,
-              height: 200,
-              color: SunyTheme.SunyBlue(),
-                ),
+              height: MediaQuery.of(context).size.width * 0.06,
+            ),
             Container(
-              child: Column(
-                children: [
-                  Container(
-                    width: 100,
-                    height: 100,
-                    color: SunyTheme.SunyDarkBlue(),
-                ),
-                Container(
-                  width: 100,
-                  height: 100,
-                  color: SunyTheme.SunyLightBlue(),
-                ),
-              ]
-              )
+              child: Flexible(
+                  child: TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: "Seach (#Tags)",
+                        hintStyle: TextStyle(color: SunyTheme.SunyDarkBlue()),
+                      )
+                  )
+              ),
+              width: MediaQuery.of(context).size.width*0.94,
+            ),
+            Container(
+              height: MediaQuery.of(context).size.width * 0.06,
+            ),
+            Container(
+                child: Row(
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.03,
+                      ),
+                      GestureDetector(
+                        child: Container(
+                          width: MediaQuery.of(context).size.width * 0.45,
+                          height: 400,
+                          color: SunyTheme.SunyBlue(),
+                          child: Text(
+                            'Write a petition',
+                              style: TextStyle(color: Colors.white),
+                          )
+                        ),
+                        onTap:() { Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Create(),),);}),
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.04,
+                      ),
+                      Container(
+                        child: Column(
+                          children: [
+                          Container(width: MediaQuery.of(context).size.width * 0.45,
+                            height: 155,
+                            color: SunyTheme.SunyDarkBlue(),
+                          ),
+                            Container(
+                              height: 20
+                            ),
+                            Container(
+                              width: MediaQuery.of(context).size.width * 0.45,
+                              height: 225,
+                              color: SunyTheme.SunyLightBlue(),
+                            ),
+                            ]
+                      ),
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.03,
+                      )
+                    ]
+                )
             ),
           ]
       ),

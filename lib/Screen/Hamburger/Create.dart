@@ -8,7 +8,7 @@ class Create extends StatelessWidget {
     return Scaffold(
       appBar:
       AppBar(title: Text(
-        'Petitions',
+        'Create Petitions',
         style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
       ),
       ),

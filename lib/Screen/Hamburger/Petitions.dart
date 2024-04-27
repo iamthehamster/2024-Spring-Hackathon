@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 
+import "../../Theme/SunyTheme.dart";
+
 class Petitions extends StatelessWidget {
   const Petitions({ Key? key }) : super(key: key);
 
@@ -35,7 +37,10 @@ class Petitions extends StatelessWidget {
               child: const Text(
                 textAlign: TextAlign.center,
                 'Send',
+                style: TextStyle(color: Colors.white),
               ),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: SunyTheme.SunyDarkBlue()),
               onPressed: (){},
             ),
           ]

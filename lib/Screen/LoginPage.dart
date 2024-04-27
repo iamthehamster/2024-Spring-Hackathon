@@ -34,6 +34,7 @@ class LoginPage extends StatelessWidget {
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           labelText: "ID",
+                          hintStyle: TextStyle(color: SunyTheme.SunyDarkBlue()),
                         )
                     )
                 ),
@@ -45,6 +46,7 @@ class LoginPage extends StatelessWidget {
               decoration: InputDecoration(
               border: OutlineInputBorder(),
               labelText: "Password",
+                hintStyle: TextStyle(color: SunyTheme.SunyDarkBlue()),
               )
             )
           ),
@@ -54,11 +56,14 @@ class LoginPage extends StatelessWidget {
             ElevatedButton(
               child: Text(
                 textAlign: TextAlign.center,
+
                 //controller
                 //textInputAction
                 'Sign Up',
-                // style: TextStyle(fontSize: 30, color: Color(SunyTheme.SUNYTheme(1))),
+                  style: TextStyle(color: Colors.white)
               ),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: SunyTheme.SunyDarkBlue()),
               onPressed: () {showModalBottomSheet(context: context, builder: (BuildContext context) {
                 return SignUpPopUp();
     }
@@ -69,7 +74,10 @@ class LoginPage extends StatelessWidget {
               child: const Text(
                   textAlign: TextAlign.center,
                   'Log In (temp. log in anyway)',
+                style: TextStyle(color: Colors.white)
               ),
+              style: ElevatedButton.styleFrom(
+              backgroundColor: SunyTheme.SunyDarkBlue()),
               onPressed: (){
                 Navigator.push(
                   context,

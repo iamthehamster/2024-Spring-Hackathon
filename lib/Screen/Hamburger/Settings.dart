@@ -1,5 +1,8 @@
 import "package:flutter/material.dart";
 
+import "../../Theme/SunyTheme.dart";
+import "../Home.dart";
+
 class Settings extends StatelessWidget {
   const Settings({ Key? key }) : super(key: key);
 
@@ -8,7 +11,7 @@ class Settings extends StatelessWidget {
     return Scaffold(
       appBar:
       AppBar(title: Text(
-        'Sign in',
+        'Settings',
         style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
       ),
       ),
@@ -34,10 +37,14 @@ class Settings extends StatelessWidget {
             ElevatedButton(
               child: const Text(
                 textAlign: TextAlign.center,
-                'Sign Up',
+                style: TextStyle(color: Colors.white),
+                'Save',
               ),
-              onPressed: (){},
-            ),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: SunyTheme.SunyDarkBlue()),              onPressed: (){Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Home()),); },
+            )
           ]
       ),
 
