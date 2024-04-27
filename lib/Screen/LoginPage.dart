@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:fluttercopy/Screen/SignUpPopUp.dart";
 import "package:fluttercopy/Theme/SunyTheme.dart";
 
+import "BottomBar/BottomBar.dart";
 import "BottomBar/Home.dart";
 
 class LoginPage extends StatelessWidget {
@@ -9,6 +10,10 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // bool knockKnock = false;
+    // bool knockKnockStatus() {
+    //   return knockKnock;
+    // }
     return Scaffold(
       appBar:
       AppBar(title: Text(
@@ -54,6 +59,7 @@ class LoginPage extends StatelessWidget {
                   context,
                   MaterialPageRoute(builder: (context) => Home(),),
                 );
+                // knockKnock = true;
               },
             ),
           ]

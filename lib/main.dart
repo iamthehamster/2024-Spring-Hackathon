@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
-
-import 'package:fluttercopy/Screen/LoginPage.dart';
+import 'Screen/BottomBar/Home.dart';
+import 'Screen/LoginPage.dart';
 
 void main(){
   runApp(MyApp());
@@ -12,23 +11,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:LoginPage(),
+      home: LoginPage(),
     );
   }
 }
 
-class Home extends StatefulWidget {
-  @override
-  _HomeState createState() {
-    return _HomeState();
-  }
-}
-
-class _HomeState extends State<Home> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-    );
-    }
-  }
+// class MyApp extends StatefulWidget {
+//   @override
+//   _MyApp createState() {
+//     return _MyApp();
+//   }
+// }
+//
+// class _MyApp extends State<MyApp> {
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home:LoginPage(),
+//     );
+//     }
+//   }

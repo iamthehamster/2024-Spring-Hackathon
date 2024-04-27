@@ -12,8 +12,7 @@ class Profile extends StatelessWidget {
         style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
       ),
       ),
-      body:
-
+      // body:
 
     );
   }

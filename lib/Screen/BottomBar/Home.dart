@@ -18,6 +18,11 @@ class Home extends StatelessWidget {
       Row(
           // mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
+            // TextField(
+            //     decoration: InputDecoration(
+            //       border: OutlineInputBorder(),
+            //       labelText: "ID",
+            //     )),
             Container(
               width: 100,
               height: 200,
