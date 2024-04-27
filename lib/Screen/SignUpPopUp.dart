@@ -16,31 +16,54 @@ class SignUpPopUp extends StatelessWidget {
       Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            TextField(
-                decoration: InputDecoration(
+            Container(
+              child: Flexible(
+                child: TextField(
+                  decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: "ID",
-                )),
-            TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: "School Email(@stonybrook.edu)",
-                )),
-            TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: "Password",
-                )),
-            ElevatedButton(
+                )
+                )
+              ),
+              width: MediaQuery.of(context).size.width*0.9
+            ),
+            Container(
+                child: Flexible(
+                    child: TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: "School Email (@StonyBrook.edu)",
+                        )
+                    )
+                ),
+                width: MediaQuery.of(context).size.width*0.9,
+            ),
+            Container(
+                child: Flexible(
+                    child: TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: "Password",
+                        )
+                    )
+                ),
+                width: MediaQuery.of(context).size.width*0.9
+            ),
+            Container(
+              child: ElevatedButton(
               child: const Text(
                 textAlign: TextAlign.center,
                 'Sign Up',
               ),
               onPressed: (){},
             ),
+            width: MediaQuery.of(context).size.width*0.9,
+            ),
+            Container(),
           ]
       ),
 
     );
+
   }
 }

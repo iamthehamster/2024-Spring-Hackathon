@@ -1,9 +1,9 @@
+import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
 import "package:fluttercopy/Screen/SignUpPopUp.dart";
 import "package:fluttercopy/Theme/SunyTheme.dart";
 
-import "BottomBar/BottomBar.dart";
-import "BottomBar/Home.dart";
+import "Home.dart";
 
 class LoginPage extends StatelessWidget {
   const LoginPage({ Key? key }) : super(key: key);
@@ -15,26 +15,42 @@ class LoginPage extends StatelessWidget {
     //   return knockKnock;
     // }
     return Scaffold(
-      appBar:
-      AppBar(title: Text(
-        'Sign in',
-        style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
-      ),
-      ),
       body:
       Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: "ID",
-                )),
-            TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: "Password",
-                )),
+            Container(
+              height: MediaQuery.of(context).size.height * 0.1
+            ),
+            Container(
+              child: Text("Sign In", style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),)
+            ),
+            Container(
+                height: MediaQuery.of(context).size.height * 0.001
+            ),
+            Container(
+                child: Flexible(
+                    child: TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: "ID",
+                        )
+                    )
+                ),
+                width: MediaQuery.of(context).size.width*0.9
+            ),
+            Container(
+              child: Flexible(
+              child: TextField(
+              decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: "Password",
+              )
+            )
+          ),
+            width: MediaQuery.of(context).size.width*0.9,
+            ),
+            Container(),
             ElevatedButton(
               child: Text(
                 textAlign: TextAlign.center,
@@ -61,6 +77,9 @@ class LoginPage extends StatelessWidget {
                 );
                 // knockKnock = true;
               },
+            ),
+            Container(
+                height: MediaQuery.of(context).size.height * 0.1
             ),
           ]
       ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Screen/BottomBar/Home.dart';
+import 'Screen/Home.dart';
 import 'Screen/LoginPage.dart';
 
 void main(){
